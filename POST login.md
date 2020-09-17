@@ -27,7 +27,7 @@
 
 * Examples
 
-``` html
+```html
 http://140.131.115.99/api/login
 
 email    = example@example.com
