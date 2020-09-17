@@ -102,6 +102,8 @@ http://140.131.115.99/api/template/show/1?time=1
 }
 ```
 
+---
+
 * Examples (3)
 
 取類型為meme的模板，以時間排序，並只顯示自己所製做的模板
