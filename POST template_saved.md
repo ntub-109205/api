@@ -5,7 +5,7 @@
 * Parameters
 
 |key        |type                |
-|--------   |--------------------|
+|-----------|--------------------|
 |template_id|required;template_id|
 
 >* required為必要
