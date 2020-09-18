@@ -33,5 +33,5 @@ meme_image = 比讚貓咪2.jpg
 * Above example will output
 
 ```yaml
-{"success":"your posts has been successfully saved!","template_id":3}
+{"success":"your posts has been successfully saved!"}
 ```
