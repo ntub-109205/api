@@ -1,6 +1,7 @@
 #### `<POST> http://140.131.115.99/api/txt/templateStore`
 
 用途：上傳模板的文字訊息
+
 >* 需搭配api : template_store
 
 * Parameters
