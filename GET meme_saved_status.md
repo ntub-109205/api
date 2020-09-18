@@ -17,7 +17,7 @@
 
 * Examples
 
-顯示使用者是否有收藏template_id為1的模板
+顯示使用者是否有收藏meme_id為1的梗圖
 
 ```html
 http://140.131.115.99/api/meme/saved/1
