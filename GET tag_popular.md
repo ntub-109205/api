@@ -1,6 +1,6 @@
 #### `<GET> http://140.131.115.99/api/tag`
 
-用途：登入
+用途：顯示熱門 tags
 
 * Parameters
 
