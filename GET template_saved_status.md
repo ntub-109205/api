@@ -28,3 +28,5 @@ http://140.131.115.99/api/template/saved/1
 ```yaml
 {"saved":"0"}
 ```
+
+>* 代表該使用者沒有收藏template_id為1的梗圖
