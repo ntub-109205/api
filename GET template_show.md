@@ -6,10 +6,11 @@
 
 * Parameters
 
-|key |type             |
-|----|-----------------|
-|time|sometimes;boolean|
-|user|sometimes;boolean|
+|key  |type             |
+|-----|-----------------|
+|time |sometimes;boolean|
+|user |sometimes;boolean|
+|limit|sometimes;numeric|
 
 >* sometimes為選擇性加入參數
 
@@ -127,4 +128,41 @@ http://140.131.115.99/api/template/show/1?time=1&user=1
         }
     ]
 }
+```
+
+---
+
+* Examples (4)
+
+取"前十筆"類型為meme的模板，以引用次數排序
+
+```html
+http://140.131.115.99/api/template/show/1?limit=10
+```
+
+* Above example will output
+
+```yaml
+{
+    "templates": [
+        {
+            "id": 1,
+            "filelink": "http://140.131.115.99/images/templates/meme/1600437269.jpeg",
+            "name": "小貓",
+            "author": "10836023",
+            "count": 1,
+            "created_at": "2020-09-18 21:54:29"
+        },
+        {
+            "id": 2,
+            "filelink": "http://140.131.115.99/images/templates/meme/1600437361.jpeg",
+            "name": "兇貓",
+            "author": "kevin",
+            "count": 0,
+            "created_at": "2020-09-18 21:56:01"
+        }
+    ]
+}
+
+--- 以下略 ---
 ```
