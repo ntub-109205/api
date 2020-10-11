@@ -6,8 +6,8 @@
 
 |key       |type                         |
 |----------|-----------------------------|
-|name      |required;max:100;unique      |
 |email     |required;email;max:255;unique|
+|name      |required;max:100;unique      |
 |password  |required;min:6;max:255       |
 |c_password|required;same:password       |
 
