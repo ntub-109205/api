@@ -2,7 +2,7 @@
 
 用途：上傳模板圖片
 
->* 需搭配api : template_txt_store
+>* 需先使用api : [txt store](https://github.com/ntub-109205/api/blob/master/POST%20txt_store.md)
 
 * Parameters
 
@@ -25,6 +25,26 @@
 ---
 
 * Examples
+
+上傳公開的梗圖模板
+
+* execute [txt store](https://github.com/ntub-109205/api/blob/master/POST%20txt_store.md)
+
+```html
+http://140.131.115.99/api/txt/store
+
+category_id = 1
+share       = 1
+name        = example
+```
+
+* Above example will output
+
+```yaml
+{"success":"your posts has been successfully saved!"}
+```
+
+* then execute template store api
 
 ```html
 http://140.131.115.99/api/template/store
