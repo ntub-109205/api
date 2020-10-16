@@ -1,6 +1,6 @@
 #### `<GET> http://140.131.115.99/api/meme/show/{category_id}`
 
->* category_id值為1(梗圖)或2(長輩圖)
+>* category_id值為1(梗圖)、2(長輩圖)、3(gif)
 
 用途：顯示梗圖
 
