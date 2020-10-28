@@ -1,6 +1,6 @@
 #### `<GET> http://140.131.115.99/api/template/show/{category_id}`
 
->* category_id值為1(梗圖)或2(長輩圖)
+>* category_id值為1(梗圖)或2(長輩圖)或0(全部)
 
 用途：顯示模板
 
@@ -134,10 +134,10 @@ http://140.131.115.99/api/template/show/1?time=1&user=1
 
 * Examples (4)
 
-取"前十筆"類型為meme的模板，以引用次數排序
+取"前十筆"模板，以引用次數排序
 
 ```html
-http://140.131.115.99/api/template/show/1?limit=10
+http://140.131.115.99/api/template/show/0?limit=10
 ```
 
 * Above example will output
@@ -147,19 +147,19 @@ http://140.131.115.99/api/template/show/1?limit=10
     "templates": [
         {
             "id": 1,
-            "filelink": "http://140.131.115.99/images/templates/meme/1600437269.jpeg",
-            "name": "小貓",
+            "filelink": "http://140.131.115.99/images/templates/meme/1603881099.png",
+            "name": "example",
             "author": "10836023",
             "count": 1,
-            "created_at": "2020-09-18 21:54:29"
+            "created_at": "2020-10-28 18:31:39"
         },
         {
             "id": 2,
-            "filelink": "http://140.131.115.99/images/templates/meme/1600437361.jpeg",
-            "name": "兇貓",
-            "author": "kevin",
+            "filelink": "http://140.131.115.99/images/templates/elder/1603881131.png",
+            "name": "example elder",
+            "author": "10836023",
             "count": 0,
-            "created_at": "2020-09-18 21:56:01"
+            "created_at": "2020-10-28 18:32:11"
         }
     ]
 }
