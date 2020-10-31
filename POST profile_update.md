@@ -17,7 +17,7 @@
 >* value型態以field值決定，若field為share，則為bool；若field為name，則為string
 >* 只能更改自己的作品設定
 
-以下將由範例詳細說明
+以上將由範例詳細說明
 
 ---
 
