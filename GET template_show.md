@@ -28,6 +28,7 @@
             "name": ${template_name},
             "author": ${author},
             "count": ${模板被引用次數},
+            "share": ${share},
             "created_at": "2020-09-16 14:41:25"
         }
     ]
@@ -55,6 +56,7 @@ http://140.131.115.99/api/template/show/1
             "name": "兇貓",
             "author": "kevin",
             "count": 1,
+            "share": 1,
             "created_at": "2020-09-16 14:41:25"
         },
         {
@@ -63,6 +65,7 @@ http://140.131.115.99/api/template/show/1
             "name": "小貓",
             "author": "10836023",
             "count": 0,
+            "share": 1,
             "created_at": "2020-09-17 22:30:08"
         }
     ]
@@ -90,6 +93,7 @@ http://140.131.115.99/api/template/show/1?time=1
             "name": "小貓",
             "author": "10836023",
             "count": 0,
+            "share": 1,
             "created_at": "2020-09-17 22:30:08"
         },
         {
@@ -98,6 +102,7 @@ http://140.131.115.99/api/template/show/1?time=1
             "name": "兇貓",
             "author": "kevin",
             "count": 1,
+            "share": 1,
             "created_at": "2020-09-16 14:41:25"
         }
     ]
@@ -125,6 +130,7 @@ http://140.131.115.99/api/template/show/1?time=1&profile=myWork
             "name": "兇貓",
             "author": "kevin",
             "count": 1,
+            "share": 1,
             "created_at": "2020-09-16 14:41:25"
         }
     ]
@@ -152,8 +158,8 @@ http://140.131.115.99/api/template/show/1?time=1&profile=saved
             "name": "example template meme",
             "author": "test",
             "count": 0,
-            "created_at": "2020-11-04 17:18:44",
-            "share": 1
+            "share": 1,
+            "created_at": "2020-11-04 17:18:44"
         },
         {
             "id": 1,
@@ -161,8 +167,8 @@ http://140.131.115.99/api/template/show/1?time=1&profile=saved
             "name": "example meme",
             "author": "test",
             "count": 1,
-            "created_at": "2020-11-04 17:16:15",
-            "share": 1
+            "share": 1,
+            "created_at": "2020-11-04 17:16:15"
         }
     ]
 }
@@ -191,6 +197,7 @@ http://140.131.115.99/api/template/show/0?limit=10
             "name": "example",
             "author": "10836023",
             "count": 1,
+            "share": 1,
             "created_at": "2020-10-28 18:31:39"
         },
         {
@@ -199,6 +206,7 @@ http://140.131.115.99/api/template/show/0?limit=10
             "name": "example elder",
             "author": "10836023",
             "count": 0,
+            "share": 1,
             "created_at": "2020-10-28 18:32:11"
         }
     ]
@@ -230,8 +238,8 @@ http://140.131.115.99/api/template/show/0?name=example
             "name": "example meme",
             "author": "test",
             "count": 1,
+            "share": 1,
             "created_at": "2020-11-04 17:16:15",
-            "share": 1
         },
         {
             "id": 2,
@@ -239,8 +247,8 @@ http://140.131.115.99/api/template/show/0?name=example
             "name": "example template meme",
             "author": "test",
             "count": 0,
-            "created_at": "2020-11-04 17:18:44",
-            "share": 1
+            "share": 1,
+            "created_at": "2020-11-04 17:18:44"
         }
     ]
 }
@@ -267,8 +275,8 @@ http://140.131.115.99/api/template/show/0?name=example&limit=10
             "name": "example meme",
             "author": "test",
             "count": 1,
-            "created_at": "2020-11-04 17:16:15",
-            "share": 1
+            "share": 1,
+            "created_at": "2020-11-04 17:16:15"
         },
         {
             "id": 2,
@@ -276,8 +284,8 @@ http://140.131.115.99/api/template/show/0?name=example&limit=10
             "name": "example template meme",
             "author": "test",
             "count": 0,
-            "created_at": "2020-11-04 17:18:44",
-            "share": 1
+            "share": 1,
+            "created_at": "2020-11-04 17:18:44"
         }
     ]
 }
