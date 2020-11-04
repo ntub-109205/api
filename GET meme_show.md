@@ -6,10 +6,11 @@
 
 * Parameters
 
-|key |type             |
-|----|-----------------|
-|time|sometimes;boolean|
-|user|sometimes;boolean|
+|key     |type                           |
+|--------|-------------------------------|
+|time    |sometimes;boolean              |
+|profile |sometimes;In('saved', 'myWork')|
+|tag_name|sometimes;string               |
 
 >* sometimes為選擇性加入參數
 
@@ -137,10 +138,10 @@ http://140.131.115.99/api/template/show/1?time=1
 
 * Examples (3)
 
-取類型為meme的梗圖，以時間排序，並只顯示自己所製做的梗圖
+取類型為meme的梗圖，以時間排序，並只顯示自己所"製做"的梗圖
 
 ``` html
-http://140.131.115.99/api/meme/show/1?user=1&time=1
+http://140.131.115.99/api/meme/show/1?profile=myWork&time=1
 ```
 
 * Above example will output
@@ -160,6 +161,84 @@ http://140.131.115.99/api/meme/show/1?user=1&time=1
             "created_at": "2020-10-31 11:03:15",
             "tags": [
                 "bird"
+            ]
+        }
+    ]
+}
+```
+
+---
+
+* Examples (4)
+
+取類型為meme的梗圖，以時間排序，並只顯示自己所"收藏"的"公開"梗圖
+
+``` html
+http://140.131.115.99/api/meme/show/1?profile=saved&time=1
+```
+
+* Above example will output
+
+```yaml
+{
+    "meme": [
+        {
+            "meme_id": 1,
+            "filelink": "http://140.131.115.99/images/meme/meme/1604481669.jpeg",
+            "author": "test",
+            "template_id": 1,
+            "template_share": 1,
+            "meme_share": 1,
+            "count": 1,
+            "thumb": 1,
+            "created_at": "2020-11-04 17:21:09",
+            "tags": [
+                "test meme"
+            ]
+        }
+    ]
+}
+```
+
+>* 代表該使用者收藏了meme_id為1的梗圖
+
+若該使用者沒有收藏任何梗圖，則回傳key為meme的空陣列
+
+```yaml
+{
+    "meme":[]
+}
+```
+
+---
+
+* Examples (5)
+
+取類型為meme，tag為"made"的"公開"梗圖，以讚數排序
+
+>* 後端會將made前後加上萬用字元，也就是搜尋出的結果為%made%
+
+``` html
+http://140.131.115.99/api/meme/show/1?test=meme
+```
+
+* Above example will output
+
+```yaml
+{
+    "meme": [
+        {
+            "meme_id": 2,
+            "filelink": "http://140.131.115.99/images/meme/meme/1604483150.jpeg",
+            "author": "test",
+            "template_id": 1,
+            "template_share": 1,
+            "meme_share": 1,
+            "count": 0,
+            "thumb": 0,
+            "created_at": "2020-11-04 17:45:50",
+            "tags": [
+                "test made meme"
             ]
         }
     ]
