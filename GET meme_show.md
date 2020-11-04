@@ -219,7 +219,7 @@ http://140.131.115.99/api/meme/show/1?profile=saved&time=1
 >* 後端會將made前後加上萬用字元，也就是搜尋出的結果為%made%
 
 ``` html
-http://140.131.115.99/api/meme/show/1?test=meme
+http://140.131.115.99/api/meme/show/1?tag_name=made
 ```
 
 * Above example will output
