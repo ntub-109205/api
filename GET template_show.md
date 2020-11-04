@@ -6,11 +6,12 @@
 
 * Parameters
 
-|key  |type             |
-|-----|-----------------|
-|time |sometimes;boolean|
-|user |sometimes;boolean|
-|limit|sometimes;numeric|
+|key     |type                           |
+|--------|-------------------------------|
+|time    |sometimes;boolean              |
+|profile |sometimes;In('saved', 'myWork')|
+|limit   |sometimes;numeric              |
+|name    |sometimes;string               |
 
 >* sometimes為選擇性加入參數
 
@@ -107,10 +108,10 @@ http://140.131.115.99/api/template/show/1?time=1
 
 * Examples (3)
 
-取類型為meme的模板，以時間排序，並只顯示自己所製做的模板
+取類型為meme的模板，以時間排序，並只顯示自己所"製做"的模板
 
 ```html
-http://140.131.115.99/api/template/show/1?time=1&user=1
+http://140.131.115.99/api/template/show/1?time=1&profile=myWork
 ```
 
 * Above example will output
@@ -133,6 +134,45 @@ http://140.131.115.99/api/template/show/1?time=1&user=1
 ---
 
 * Examples (4)
+
+取類型為meme的模板，以時間排序，並只顯示自己所"收藏"的"公開"模板
+
+```html
+http://140.131.115.99/api/template/show/1?time=1&profile=saved
+```
+
+* Above example will output
+
+```yaml
+{
+    "templates": [
+        {
+            "id": 2,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481524.png",
+            "name": "example template meme",
+            "author": "test",
+            "count": 0,
+            "created_at": "2020-11-04 17:18:44",
+            "share": 1
+        },
+        {
+            "id": 1,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481375.png",
+            "name": "example meme",
+            "author": "test",
+            "count": 1,
+            "created_at": "2020-11-04 17:16:15",
+            "share": 1
+        }
+    ]
+}
+```
+
+>* 代表該使用者收藏了template_id為1跟2的模板
+
+---
+
+* Examples (5)
 
 取"前十筆"模板，以引用次數排序
 
@@ -165,4 +205,80 @@ http://140.131.115.99/api/template/show/0?limit=10
 }
 
 --- 以下略 ---
+```
+
+---
+
+* Examples (6)
+
+取name為"example"的模板，以引用次數排序
+
+>* 後端會將example前後加上萬用字元，也就是搜尋出的結果為%example%
+
+```html
+http://140.131.115.99/api/template/show/0?name=example
+```
+
+* Above example will output
+
+```yaml
+{
+    "templates": [
+        {
+            "id": 1,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481375.png",
+            "name": "example meme",
+            "author": "test",
+            "count": 1,
+            "created_at": "2020-11-04 17:16:15",
+            "share": 1
+        },
+        {
+            "id": 2,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481524.png",
+            "name": "example template meme",
+            "author": "test",
+            "count": 0,
+            "created_at": "2020-11-04 17:18:44",
+            "share": 1
+        }
+    ]
+}
+```
+
+---
+
+* Examples (7)
+
+取name為"example"的模板，以引用次數排序，且只取"前十筆"
+
+```html
+http://140.131.115.99/api/template/show/0?name=example&limit=10
+```
+
+* Above example will output
+
+```yaml
+{
+    "templates": [
+        {
+            "id": 1,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481375.png",
+            "name": "example meme",
+            "author": "test",
+            "count": 1,
+            "created_at": "2020-11-04 17:16:15",
+            "share": 1
+        },
+        {
+            "id": 2,
+            "filelink": "http://140.131.115.99/images/templates/meme/1604481524.png",
+            "name": "example template meme",
+            "author": "test",
+            "count": 0,
+            "created_at": "2020-11-04 17:18:44",
+            "share": 1
+        }
+    ]
+}
 ```
